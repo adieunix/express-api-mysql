@@ -1,5 +1,5 @@
-# restful-nodejs-express-mysql
+## NodeJS / Express / MySQL
+1. Run `npm install` first to initiate node modules
+2. Running server `node server`
+3. Browse url on port 3000
 
-1. Run app on console : node app
-2. Open browser http://localhost:3000
-# NodeJS / Express / MySQL
