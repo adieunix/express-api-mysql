@@ -1,4 +1,5 @@
 const app = require('./app');
+const port = 60123;
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -18,4 +19,4 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(3000, () => console.log('Server listening on port 3000!'));
+app.listen(port, () => console.log('Server listening on port '+port+'!'));
