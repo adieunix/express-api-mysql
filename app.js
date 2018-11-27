@@ -27,9 +27,6 @@ app.use('/', index);
 const users = require('./routes/Users');
 app.use('/users', users);
 
-const tasks = require('./routes/Task');
-app.use('/tasks',tasks);
-
 
 /* Export to server.js */
 module.exports = app;
