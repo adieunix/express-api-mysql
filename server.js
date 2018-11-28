@@ -1,5 +1,5 @@
 const app = require('./app');
-const port = 60123;
+const port = 3000;
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
