@@ -6,8 +6,11 @@ A simple way to build express restful api and mysql server.
 
 ### URI Routing
 Query string of URL to request and handling each params
+
 `localhost:3000/controller/method?key=<api_key>&params=<params>`
+
 **example :**
+
 `http://localhost:3000/users/get_all_users?key=keyfordevelopment&start=0&limit=10`
 
 ### Route / Method
