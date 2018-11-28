@@ -18,9 +18,9 @@ Define your methods depends on controller name
 
 **example**
 
-`User.js` : get_all_users get_user update_user
+`User.js` : **get_all_users**   **get_user**   **update_user**
 
-`Task.js` : get_all_tasks get_task_by_id
+`Task.js` : **get_all_tasks**   **get_task_by_id**
 
 ### Models
 Same as route, you have to create each of models depends on controller name
@@ -33,5 +33,7 @@ Simplify your codes using constant helpers and redefine into each methods.
 
 ### Dbconnection.js
 Configure your connection to MySQL server instance. Dumping sql file (**adiepw_api.sql**) for testing purposes
+
+___
 
 More feedback? Feel free to contact me at **[me@adie.pw](mailto:me@adie.pw)**
