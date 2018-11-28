@@ -15,14 +15,21 @@ Query string of URL to request and handling each params
 
 ### Route / Method
 Define your methods depends on controller name
+
 **example**
+
 `User.js`
+
 get_all_users
+
 get_user
+
 update_user
 
 `Task.js`
+
 get_all_tasks
+
 get_task_by_id
 
 ### Models
@@ -36,6 +43,7 @@ Simplify your codes using constant helpers and redefine into each methods.
 
 ### Dbconnection.js
 Configure your connection to MySQL server instance. Dumping sql file (**adiepw_api.sql**) for testing purposes
+
 
 
 Feel free to contact me at **[me@adie.pw](mailto:me@adie.pw)**
