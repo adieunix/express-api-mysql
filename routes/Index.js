@@ -3,7 +3,9 @@ const router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'REST API' });
+  res.render('index', {
+    title: 'NodeJS / Express / MySQL'
+  });
 });
 
 module.exports = router;
