@@ -16,6 +16,4 @@ A simple way to build express restful api and mysql server.
 user :: 123456
 
 ### Dbconnection.js
-Configure your connection to MySQL server instance.
-SQL file: **example_api.sql** 
-Database Name: **example_api** 
+Configure your connection to MySQL server instance . SQL file: **example_api.sql** . Database Name: **example_api** 
