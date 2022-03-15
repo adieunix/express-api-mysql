@@ -6,14 +6,16 @@ A simple way to build express restful api and mysql server.
 
 ### URI Routing
 
-`localhost:3000/controller/method?key=<api_key>&params=<params>`
+`localhost:3000/controller/method?params=<params>`
 
 **example :**
 
-`http://localhost:3000/users/get_all_users?key=keyfordevelopment&start=0&limit=10`
+`http://localhost:3000/users/get_all_users?start=0&limit=10`
 
-### Constant.js
-Simplify your codes using constant helpers and redefine into each methods.
+### HTTP Auth
+user :: 123456
 
 ### Dbconnection.js
-Configure your connection to MySQL server instance. Dumping sql file (**adiepw_api.sql**) to database name **adiepw_api** for testing purpose
+Configure your connection to MySQL server instance.
+SQL file: **example_api.sql** 
+Database Name: **example_api** 

@@ -3,6 +3,7 @@ const path = require('path');
 const exphbs  = require('express-handlebars');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const basicAuth = require('express-basic-auth');
 const cors = require('cors');
 const app = express();
 
@@ -17,6 +18,10 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(basicAuth({
+    users: { 'user': '123456' },
+    challenge: true,
+}))
 
 /* Routes */
 const index = require('./routes/Index');
