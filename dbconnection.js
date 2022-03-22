@@ -1,12 +1,23 @@
 const mysql = require('mysql');
-const connection = mysql.createPool({
+const { Sequelize } = require("sequelize");
 
+const query = mysql.createPool({
     host:'localhost',
     user:'root',
     password:'',
     database:'example_api',
     port:3306
-
 });
 
-module.exports = connection;
+const sequelize = new Sequelize('example_api', 'root', '', {
+    host: 'localhost',
+    dialect: 'mysql',
+    define: {
+        timestamps: false
+    }
+});
+
+module.exports = {
+    query: query,
+    sequelize: sequelize,
+};

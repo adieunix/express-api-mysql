@@ -21,7 +21,7 @@ app.use(cookieParser());
 app.use(basicAuth({
     users: { 'user': '123456' },
     challenge: true,
-}))
+}));
 
 /* Routes */
 const index = require('./routes/Index');

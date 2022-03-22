@@ -3,6 +3,15 @@ const router = express.Router();
 const User = require('../models/User');
 const constant = require('../helpers/Constants');
 
+/* Sequelize GET all users params {key,start,limit} */
+router.get(constant.API_GET_ALL_USERS_SEQUELIZE, async function(req, res) {
+    res.json({
+        status_code: 1,
+        message: 'success',
+        data: await User.getAllUsersSequelize(Number(req.query.start),Number(req.query.limit))
+    });
+});
+
 /* GET all users params {key,start,limit} */
 router.get(constant.API_GET_ALL_USERS, function(req, res, next) {
     User.getAllUsers(
