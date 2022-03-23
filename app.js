@@ -3,6 +3,8 @@ const path = require('path');
 const exphbs  = require('express-handlebars');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const multer = require('multer');
+const forms = multer();
 const basicAuth = require('express-basic-auth');
 const cors = require('cors');
 const app = express();
@@ -16,6 +18,7 @@ app.set('view engine', '.hbs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 app.use(bodyParser.json());
+app.use(forms.array());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(basicAuth({
