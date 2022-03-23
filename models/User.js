@@ -19,6 +19,7 @@ const sequelizeConfigUser = db.sequelize.define('users', {
 
 const User = {
 
+    /* Get All Users */
     getAllUsersSequelize: function(start,limit,callback) {
         sequelizeConfigUser.findAll({
             offset: start,
@@ -35,6 +36,7 @@ const User = {
         return db.query.query("SELECT * FROM users LIMIT ?,?", [start,limit], callback);
     },
 
+    /* Get User by ID */
     getUserByIdSequelize: function(id,callback) {
         sequelizeConfigUser.findOne({
             where: { id: id }
@@ -50,6 +52,7 @@ const User = {
         return db.query.query("SELECT * FROM users WHERE id = ?", [id], callback);
     },
 
+    /* Add User */
     addUserSequelize: function(user,callback) {
         sequelizeConfigUser.create(user).then(function(item){
             callback(false, JSON.parse(JSON.stringify(item)))
@@ -63,6 +66,7 @@ const User = {
         return db.query.query("INSERT INTO users (name,email,`password`) VALUES (?,?,?)", [user.name,user.email,sha1(user.password)], callback);
     },
 
+    /* Update User by ID */
     updateUserByIdSequelize: function(user,callback) {
         sequelizeConfigUser.update(user, {
             where: {
@@ -80,6 +84,7 @@ const User = {
         return db.query.query("UPDATE users SET name=?,email=?,password=? WHERE id=?", [user.name,user.email,sha1(user.password),user.id], callback);
     },
 
+    /* delete User by ID */
     deleteUserByIdSequelize: function(id,callback) {
         sequelizeConfigUser.destroy({
             where: {
