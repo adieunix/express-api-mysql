@@ -40,7 +40,7 @@ router.get(constant.API_GET_ALL_USERS, function(req, res, next) {
                 });
             } else {
                 res.json({
-                    status_code: 0,
+                    status_code: 1,
                     message: 'success',
                     data: rowsRes
                 });
@@ -62,7 +62,7 @@ router.get(constant.API_GET_USER_BY_ID, function(req, res, next) {
                 });
             } else {
                 res.json({
-                    status_code: 0,
+                    status_code: 1,
                     message: 'success',
                     data: rowsRes
                 });
@@ -88,7 +88,7 @@ router.post(constant.API_ADD_USER, function(req,res,next) {
                 });
             } else {
                 res.json({
-                    status_code: 0,
+                    status_code: 1,
                     message: 'success',
                     data: rowsRes
                 });
@@ -115,7 +115,7 @@ router.post(constant.API_UPDATE_USER,function(req,res,next) {
                 });
             } else {
                 res.json({
-                    status_code: 0,
+                    status_code: 1,
                     message: 'success',
                     data: rowsRes
                 });
@@ -135,7 +135,7 @@ router.post(constant.API_DELETE_USER,function(req,res,next) {
             });
         } else {
             res.json({
-                status_code: 0,
+                status_code: 1,
                 message: 'success',
                 data: rowsRes
             });
